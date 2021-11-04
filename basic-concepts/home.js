@@ -158,4 +158,65 @@ let someNumbers = [5, 11, 2, 88, 9, 18, 23, 50, 17, 88];
 console.log(someNumbers.sort(function(a, b) {return a-b})); // Ascending
 console.log(someNumbers.sort(function(a, b) {return b-a})); // Descending
 
-let emptyArray = new Array()
+let emptyArray = new Array();
+
+for(let num = 0; num <= 10; num++) {
+    emptyArray.push(num);
+}
+
+console.log(emptyArray);
+
+// Objevcts in Javascript ( Dictionaries in Python )
+
+let student = { 
+    first: 'Rajdeep', 
+    last: 'Mukherjee', 
+    age:25, 
+    height:170,
+    studentInfo: function(){
+        return this.first +' '+ this.last;
+    }
+};
+
+
+console.log(student.first);
+console.log(student.last);
+student.first = 'notRajdeep';                   // Change value
+console.log(student.first);
+student.age++;
+console.log(student.age);
+console.log(student.studentInfo());
+
+// Conditionals, control flows ( if else )
+// 18 - 35 is my target demographic
+//var age = prompt('what is your age?');
+var age = 45;
+
+if ((age >= 18) && (age <= 35)) {
+    status = 'target demo';
+}else{
+    status = 'not my audience';
+}
+console.log(status);
+
+// Switch statements
+// Difference between weekday vs. weekend
+// day 0 --> Sunday
+// day 6 --> Saturday
+var day = prompt('Enter a number between 0 - 6');
+switch(Number(day)) {
+    case 0:
+        text = 'Weekend';
+        break;
+    case 5:
+        text = 'Weekend';
+        break;
+    case 6:
+        text = 'Weekend';
+        break;
+    default:
+        text = 'Weekday';
+}
+console.log(text);
+
+
